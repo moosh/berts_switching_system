@@ -2,7 +2,7 @@
 
     stopwatch.h
 
-    Copyright (c) 2023 Mooshwerks
+    Copyright (c) 2025 Mooshwerks
     All Rights Reserved
     
 *******************************************************************************/
