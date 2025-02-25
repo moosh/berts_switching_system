@@ -95,8 +95,8 @@ void initWifiStation()
 
     Serial.println("");
     Serial.println("CONNECTED!");
-    Serial.println("IP address: ");
-    Serial.println(WiFi.localIP());
+
+    Serial.println(String("http://") + WiFi.localIP().toString());
 }     
  
 /*******************************************************************************
