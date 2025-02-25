@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+<!-- Rui Santos - Complete project details at https://RandomNerdTutorials.com
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software. 
+
+
+var http = new XMLHttpRequest();
+var url = 'get_data.php';
+var params = 'orem=ipsum&name=binny';
+http.open('POST', url, true);
+
+//Send the proper header information along with the request
+http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+http.onreadystatechange = function() {//Call a function when the state changes.
+    if(http.readyState == 4 && http.status == 200) {
+        alert(http.responseText);
+    }
+}
+http.send(params);
+
+-->
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+
+    <style>
+        body {
+            min-width: 310px;
+            max-width: 1000px;
+            height: 500px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-family: Arial;
+            font-size: 2.5rem;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Bert's Switching Network</h2>
+    <button onclick="toggleRelay2()">Toggle Relay 2</button>
+    <button onclick="toggleRelay2()">Toggle Relay 2</button>
+</body>
+<script>
+   function toggleRelay1() 
+    {
+        const fsUsageREQ = new XMLHttpRequest();
+        fsUsageREQ.open("GET", '/toggleRelay1', false); // `false` makes the request synchronous
+        fsUsageREQ.send(null);
+   }
+
+   function toggleRelay2() 
+    {
+        const fsUsageREQ = new XMLHttpRequest();
+        fsUsageREQ.open("GET", '/toggleRelay2', false); // `false` makes the request synchronous
+        fsUsageREQ.send(null);
+   }
+
+</script>
+
+</html>
